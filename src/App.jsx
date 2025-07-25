@@ -1,14 +1,17 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-
+import {Button, HeroUIProvider} from "@heroui/react";
+import Button1 from './components/Button';
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <h1 className='text-center'>hello word</h1>
+    <HeroUIProvider>
+ <h1 className='text-center'>hello word</h1>
+ <Button1/>
+    </HeroUIProvider>
+   
       
     </>
   )

@@ -7,6 +7,7 @@ import MyNavbar from './components/Navbar';
 import HeroArea from './components/HeroArea';
 import ImgSection from './components/ImgSection';
 import ThngsCard from './components/ThngsCard';
+import ChillsBay from './components/ChillsBay';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,6 +18,7 @@ function App() {
     <HeroArea/>
     <ImgSection/>
     <ThngsCard/>
+    <ChillsBay/>
     
     </>
   )

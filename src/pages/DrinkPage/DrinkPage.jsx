@@ -3,6 +3,7 @@ import DrinkHero from './DrinkHero'
 import FindPlace from './FindPlace'
 import DrinkCarousel from './DrinkCarousel'
 import Restuarants from './common/RestuarantsCard'
+import Mymap from './Mymap'
 
 const DrinkPage = () => {
   return (
@@ -11,9 +12,8 @@ const DrinkPage = () => {
     <FindPlace/>
     <Restuarants title="Popular Restuarants in Lagos"/>
     <DrinkCarousel/>
-       <Restuarants title="Resturants nearby"/>
-   
-
+    <Restuarants title="Resturants nearby"/>
+    <Mymap/>
     </>
   )
 }

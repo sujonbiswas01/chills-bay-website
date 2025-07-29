@@ -1,9 +1,12 @@
 import { Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger, Link, Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from '@heroui/react';
 import React, { useState } from 'react'
 import { CiUser } from "react-icons/ci";
+import MyModal from './homepage/Model';
+import ProfileDropDown from './homepage/ProfileDropDown';
 
 
 const MyNavbar = () => {
+    const value = true
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const menuitems = ['Eat & Drink', 'Club', 'Things to do', 'shoping', 'Account', 'Contact Now'];
     return (
@@ -46,19 +49,6 @@ const MyNavbar = () => {
                         <Link><img src="/shoping.png" alt="" /></Link>
                     </NavbarItem>
                     <NavbarItem>
-                        <Dropdown>
-                            <DropdownTrigger>
-                                <Button variant="none"> <CiUser /> {menuitems[4]}</Button>
-                            </DropdownTrigger>
-                            <DropdownMenu aria-label="account">
-                                <DropdownItem key="new">New file</DropdownItem>
-                                <DropdownItem key="copy">Copy link</DropdownItem>
-                                <DropdownItem key="edit">Edit file</DropdownItem>
-                                <DropdownItem key="delete" className="text-danger" color="danger">
-                                    Delete file
-                                </DropdownItem>
-                            </DropdownMenu>
-                        </Dropdown>
                     </NavbarItem>
                     <NavbarItem>
                         <Button color='primary'>{menuitems[5]}</Button>
@@ -67,7 +57,7 @@ const MyNavbar = () => {
                 <div className='lg:flex bg-[#F5FAFF]'>
                     <NavbarContent className='w-full' justify='end'>
                         <NavbarItem className='hidden lg:flex'>
-
+                            {value===true? <MyModal/>:<ProfileDropDown/>}
                         </NavbarItem>
                         <NavbarItem>
                             <img src="/shoping.png" className='sm:hidden' alt="" />

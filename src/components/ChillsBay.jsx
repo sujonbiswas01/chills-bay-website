@@ -5,7 +5,7 @@ const ChillsBay = () => {
         {
             logo:"logo1.png",
             title:"Your  entire  tripin one checkout!",
-            des:"Add multiple experiences  to your cart and checkout on one click."
+            des:"Add multiple experiences to your cart and checkout on one click."
         },
         {
             logo:"logo2.png",

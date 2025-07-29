@@ -1,8 +1,8 @@
 import { Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger, Link, Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from '@heroui/react';
 import React, { useState } from 'react'
 import { CiUser } from "react-icons/ci";
-import MyModal from './homepage/Model';
-import ProfileDropDown from './homepage/ProfileDropDown';
+import MyModal from '../components/Model';
+import ProfileDropDown from '../components/ProfileDropDown';
 
 
 const MyNavbar = () => {

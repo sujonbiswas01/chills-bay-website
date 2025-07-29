@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import {Button} from "@heroui/react";
 import MyNavbar from './components/Navbar';
+import HeroArea from './components/HeroArea';
+import ImgSection from './components/ImgSection';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,6 +13,8 @@ function App() {
   return (
     <>
     <MyNavbar/>
+    <HeroArea/>
+    <ImgSection/>
     
     </>
   )

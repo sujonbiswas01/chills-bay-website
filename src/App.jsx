@@ -6,6 +6,7 @@ import {Button} from "@heroui/react";
 import MyNavbar from './components/Navbar';
 import HeroArea from './components/HeroArea';
 import ImgSection from './components/ImgSection';
+import ThngsCard from './components/ThngsCard';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,6 +16,7 @@ function App() {
     <MyNavbar/>
     <HeroArea/>
     <ImgSection/>
+    <ThngsCard/>
     
     </>
   )

@@ -22,9 +22,9 @@ const Gallary = () => {
         }
     ]
   return (
-    <section>
+    <section className='border p-10 mb-10 '>
         <div className='container mx-auto'>
-            <h3>See How people are chilling on <span className='text-blue-600'>Chillsbay</span></h3>
+            <h3 className='text-[#26395C] text-3xl font-semibold text-center lg:text-start'>See How people are chilling on <span className='text-[#0E8BFF]'>Chillsbay</span></h3>
             <div className='grid grid-cols-3 lg:grid-cols-6 mt-8'>
                 {
                     Galary.map((source)=>(

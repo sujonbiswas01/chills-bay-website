@@ -37,7 +37,7 @@ function MyModal() {
                     <ModalBody className="px-0 py-0">
                         <div className="flex flex-col md:flex-row w-full h-full md:max-h-[100vh] overflow-y-auto md:overflow-visible">
                             {/* left */}
-                            <div className="bg-[url(LoginImg.png)] bg-cover bg-no-repeat bg-center flex flex-col text-white w-full md:w-1/3 px-8 py-16">
+                            <div className="bg-[url(/LoginImg.png)] bg-cover bg-no-repeat bg-center flex flex-col text-white w-full md:w-1/3 px-8 py-16">
                                 <h3 className="text-4xl font-bold text-start mt-10">Sign Up</h3>
                                 <p className="text-sm mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tellus ullamcorper hendrerit quis purus pellentesque. Ac sagittis, convallis non tincidunt interdum eu nullam aliquam maecenas. Enim sed tortor morbi ut suspendisse. </p>
                             </div>

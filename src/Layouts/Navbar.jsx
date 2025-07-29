@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { CiUser } from "react-icons/ci";
 import MyModal from '../components/Model';
 import ProfileDropDown from '../components/ProfileDropDown';
+import { NavLink } from 'react-router-dom';
 
 
 const MyNavbar = () => {
@@ -21,14 +22,14 @@ const MyNavbar = () => {
                 {/* desktop device */}
                 <NavbarContent className='hidden sm:flex gap-4 w-full justify-center'>
                     <NavbarBrand>
-                        <img src="/logo.png" className='w-44 ' alt="" />
+                        <NavLink  to="/"><img src="/logo.png" className='w-44 cursor-pointer' alt="" /></NavLink>
 
                     </NavbarBrand>
                     <NavbarItem>
-                        <Link className='text-black'>{menuitems[0]}</Link>
+                        <NavLink to="/drink" style={({isActive})=>({color:isActive?"red":"black"})} className='text-black' >{menuitems[0]}</NavLink>
                     </NavbarItem>
-                    <NavbarItem>
-                        <Link className='foreground'>{menuitems[1]} <sub className='-mt-9'>-Hot</sub></Link>
+                    <NavbarItem className='relative mr-1'>
+                        <NavLink className='foreground' style={({isActive})=>({color:isActive?"red":"black"})} to="/club">{menuitems[1]} <sub className='absolute mb-5 -ml-3 bg-[#0E8BFF] px-4 py-2 text-white font-bold rounded-full'>-Hot</sub></NavLink>
                     </NavbarItem>
                     <NavbarItem>
                         <Dropdown>
@@ -46,7 +47,7 @@ const MyNavbar = () => {
                         </Dropdown>
                     </NavbarItem>
                     <NavbarItem>
-                        <Link><img src="/shoping.png" alt="" /></Link>
+                        <NavLink><img src="/shoping.png" alt="" /></NavLink>
                     </NavbarItem>
                     <NavbarItem>
                     </NavbarItem>
@@ -65,7 +66,7 @@ const MyNavbar = () => {
                     </NavbarContent>
                     <NavbarMenu>{menuitems.map((item, index) => (
                         <NavbarMenuItem key={index}>
-                            <Link className='w-full text-black capitalize'>{item}</Link>
+                            <NavLink className='w-full text-black capitalize'>{item}</NavLink>
 
                         </NavbarMenuItem>
                     ))}</NavbarMenu>

@@ -47,7 +47,7 @@ const MyNavbar = () => {
                         </Dropdown>
                     </NavbarItem>
                     <NavbarItem>
-                        <NavLink><img src="/shoping.png" alt="" /></NavLink>
+                        <NavLink to="/cart"><img src="/shoping.png"  alt="" /></NavLink>
                     </NavbarItem>
                     <NavbarItem>
                     </NavbarItem>
@@ -55,6 +55,7 @@ const MyNavbar = () => {
                         <Button color='primary'>{menuitems[5]}</Button>
                     </NavbarItem>
                 </NavbarContent>
+                
                 <div className='lg:flex bg-[#F5FAFF]'>
                     <NavbarContent className='w-full' justify='end'>
                         <NavbarItem className='hidden lg:flex'>

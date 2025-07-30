@@ -67,13 +67,13 @@ const ClubCarousel = () => {
                 <button onClick={handlePrev} className='absolute left-0 transform -translate-6 flex items-center justify-center bg-gray-700 text-white rounded-full w-12 h-12 '>  <IoIosArrowBack/></button>
                       <div className='flex flex-col lg:flex-row items-center gap-6 w-full px-12'>
                     <div  className='w-full lg:w-1/2'>  
-                            <h3 className='text-2xl font-semibold text-[#26395C] lg:ms-10 text-center lg:text-start'>Upcoming Eat & Drink Events</h3> 
+                            <h3 className='text-2xl font-semibold text-white lg:ms-10 text-center lg:text-start'>Upcoming Eat & Drink Events</h3> 
                             <img src={currentSlider.image} alt="" />
             
                         </div>
                         <div className='w-full lg:w-1/2 flex flex-col gap-4'>
                             <h2 className='text-2xl lg:text-5xl font-bold lg:w-[50%] leading-tight'>{currentSlider.headding}</h2>
-                            <p className='text-gray-700 lg:w-[70%] text-xl'>{currentSlider.des}</p>
+                            <p className='text-white/80 lg:w-[70%] text-xl'>{currentSlider.des}</p>
 
                             <div className='grid grid-cols-2 lg:w-[60%]'>
                                 {
@@ -108,7 +108,7 @@ const ClubCarousel = () => {
 
             <div className='flex justify-center items-center gap-2 mt-6'>
                 {CarouselData.map((_,index)=>(
-                    <button onClick={()=>HandleDotClick(index)} key={index} className={`w-3 h-3 rounded-full ${index===currentindex?'bg-black':"bg-gray-300"}`}>
+                    <button onClick={()=>HandleDotClick(index)} key={index} className={`w-3 h-3 rounded-full ${index===currentindex?'bg-blue-700':"bg-gray-300"}`}>
                     </button>
                 ))}
             </div>

@@ -2,10 +2,10 @@ import { Button } from '@heroui/react';
 import { div } from 'framer-motion/client';
 import React, { useEffect, useState } from 'react'
 
-const DrinkCard = ({title}) => {
+const DrinkCard = ({title,api}) => {
     const [data,setdata]=useState([]);
     useEffect(()=>{
-         fetch("./data.json")
+         fetch(api)
           .then((response)=>{
             return response.json()
           })
@@ -17,7 +17,7 @@ const DrinkCard = ({title}) => {
     <section className=' p-10'>
         <div className='w-[80%] mx-auto'>
             <div className='flex justify-between items-center'>
-                <h2 className='font-bold text-1xl md:text-4xl mb-4 mt-4 text-black'>{title}</h2>
+                <h2 className='font-bold text-1xl md:text-4xl mb-4 mt-4 text-white'>{title}</h2>
                 <Button variant='outline' className="text-[#0E8BFF] text-sm md:text-xl">see more</Button>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-5'>
@@ -26,8 +26,8 @@ const DrinkCard = ({title}) => {
                         <div key={mydata.id}>
                             <img src={mydata.img} className='w-[400px] object-cover rounded-lg mb-3' alt="" />
                             <h2 className='font-semibold text-lg mb-2 '>{mydata.title}</h2>
-                            <p className='text-sm text-gray-600 mb-1'>{mydata.des}</p>
-                            <p className='text-sm text-gray-500 mb-2'>{mydata.tags}</p>
+                            <p className='text-sm text-white mb-1'>{mydata.des}</p>
+                            <p className='text-sm text-white mb-2'>{mydata.tags}</p>
                             <Button color='primary' >Reserve Now</Button>
 
                         </div>

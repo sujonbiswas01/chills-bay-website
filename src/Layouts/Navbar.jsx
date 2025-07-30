@@ -52,7 +52,7 @@ const MyNavbar = () => {
                     <NavbarItem>
                     </NavbarItem>
                     <NavbarItem>
-                        <Button color='primary'>{menuitems[5]}</Button>
+                        <NavLink to="/contact"><button className='bg-blue-600 px-4 py-2 text-white rounded-xl  ' color='primary'>{menuitems[5]}</button></NavLink>
                     </NavbarItem>
                 </NavbarContent>
                 

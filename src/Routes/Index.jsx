@@ -7,6 +7,7 @@ import DrinkPage from '../pages/DrinkPage/DrinkPage';
 import Error from '../pages/Error/Error';
 import ClubPage from '../pages/ClubPage/ClubPage';
 import Payment from '../pages/PaymentPage/Payment';
+import Contact from '../pages/ContactPage/Contact';
 const Index = () => {
     return (
         <>
@@ -17,6 +18,7 @@ const Index = () => {
                     <Route path="/drink" element={<DrinkPage/>}/>
                     <Route path="/club" element={<ClubPage/>}/>
                     <Route path="/cart" element={<Payment/>}/>
+                    <Route path="/contact" element={<Contact/>}/>
                     <Route path="*" element={<Error/>}/>
                 </Routes>
                 <Footer />

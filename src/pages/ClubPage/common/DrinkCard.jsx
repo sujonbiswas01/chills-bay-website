@@ -23,7 +23,8 @@ const DrinkCard = ({title,api}) => {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-5'>
                 {
                     data.map((mydata)=>(
-                        <div key={mydata.id}>
+                        <div key={mydata.id} className='relative'>
+                          <Button className='absolute right-2 top-4'>{mydata.date}</Button>
                             <img src={mydata.img} className='w-[400px] object-cover rounded-lg mb-3' alt="" />
                             <h2 className='font-semibold text-lg mb-2 '>{mydata.title}</h2>
                             <p className='text-sm text-white mb-1'>{mydata.des}</p>

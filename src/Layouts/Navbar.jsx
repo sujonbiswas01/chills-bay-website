@@ -4,15 +4,17 @@ import { CiUser } from "react-icons/ci";
 import MyModal from '../components/Model';
 import ProfileDropDown from '../components/ProfileDropDown';
 import { NavLink } from 'react-router-dom';
+import { ThemeColor } from '../Lib/Utilites';
+import { LuShoppingCart } from "react-icons/lu";
 
 
-const MyNavbar = () => {
+const MyNavbar = ({isDark}) => {
     const value = true
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const menuitems = ['Eat & Drink', 'Club', 'Things to do', 'shoping', 'Account', 'Contact Now'];
     return (
-        <section className=''>
-            <Navbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen} maxWidth='2xl'>
+        <section className='top-0 sticky z-50'>
+            <Navbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen} maxWidth='2xl' className={ThemeColor(isDark)} >
                 <NavbarContent className='sm:hidden' justify='start' >
                     <NavbarMenuToggle aria-level={isMenuOpen ? "Close menu" : "Open menu"}>sujon</NavbarMenuToggle>
                 </NavbarContent>
@@ -26,13 +28,13 @@ const MyNavbar = () => {
 
                     </NavbarBrand>
                     <NavbarItem>
-                        <NavLink to="/drink" style={({isActive})=>({color:isActive?"red":"black"})} className='text-black' >{menuitems[0]}</NavLink>
+                        <NavLink to="/drink" style={({isActive})=>({color:isActive?"red":isDark?"white":"black"})} className={isDark?"text-white":"text-black"}>{menuitems[0]}</NavLink>
                     </NavbarItem>
                     <NavbarItem className='relative mr-1'>
-                        <NavLink className='foreground' style={({isActive})=>({color:isActive?"red":"black"})} to="/club">{menuitems[1]} <sub className='absolute mb-5 -ml-3 bg-[#0E8BFF] px-4 py-2 text-white font-bold rounded-full'>-Hot</sub></NavLink>
+                        <NavLink className='foreground' style={({isActive})=>({color:isActive?"red":isDark?"white":"black"})} to="/club">{menuitems[1]} <sub className='absolute mb-5 -ml-3 bg-[#0E8BFF] px-4 py-2 text-white font-bold rounded-full'>-Hot</sub></NavLink>
                     </NavbarItem>
                     <NavbarItem>
-                        <Dropdown>
+                        <Dropdown className={isDark?"bg-slate-800 text-white":""}>
                             <DropdownTrigger>
                                 <Button variant="none">{menuitems[2]} <span className='rotate-90 text-2xl ml-2'> ›</span></Button>
                             </DropdownTrigger>
@@ -47,16 +49,16 @@ const MyNavbar = () => {
                         </Dropdown>
                     </NavbarItem>
                     <NavbarItem>
-                        <NavLink to="/cart"><img src="/shoping.png"  alt="" /></NavLink>
+                        <NavLink to="/cart"><LuShoppingCart className={isDark?"text-white text-2xl":"text-2xl"}/></NavLink>
                     </NavbarItem>
                     <NavbarItem>
                     </NavbarItem>
                     <NavbarItem>
-                        <NavLink to="/contact"><button className='bg-blue-600 px-4 py-2 text-white rounded-xl  ' color='primary'>{menuitems[5]}</button></NavLink>
+                        <NavLink to="/contact"><button className='bg-blue-600 px-4 py-2 text-white rounded-xl' color='primary'>{menuitems[5]}</button></NavLink>
                     </NavbarItem>
                 </NavbarContent>
                 
-                <div className='lg:flex bg-[#F5FAFF]'>
+                <div className='lg:flex '>
                     <NavbarContent className='w-full' justify='end'>
                         <NavbarItem className='hidden lg:flex'>
                             {value===true? <MyModal/>:<ProfileDropDown/>}

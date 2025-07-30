@@ -8,20 +8,34 @@ import Error from '../pages/Error/Error';
 import ClubPage from '../pages/ClubPage/ClubPage';
 import Payment from '../pages/PaymentPage/Payment';
 import Contact from '../pages/ContactPage/Contact';
+import { Wrapper } from '../pages/ClubPage/common/Wrapper';
 const Index = () => {
     return (
         <>
             <BrowserRouter>
-                <MyNavbar />
                 <Routes>
-                    <Route path="/" element={<Home/>}/>
-                    <Route path="/drink" element={<DrinkPage/>}/>
-                    <Route path="/club" element={<ClubPage/>}/>
-                    <Route path="/cart" element={<Payment/>}/>
-                    <Route path="/contact" element={<Contact/>}/>
-                    <Route path="*" element={<Error/>}/>
+                    <Route path="/" element={
+                        <Wrapper>
+                            <Home />
+                        </Wrapper>
+
+                    } />
+                    <Route path="/drink" element={<Wrapper>
+                        <DrinkPage />
+                    </Wrapper>} />
+                    <Route path="/club" element={<Wrapper isDark>
+                        <ClubPage />
+                    </Wrapper>} />
+                    <Route path="/cart" element={<Wrapper>
+                        <Payment />
+                    </Wrapper>} />
+                    <Route path="/contact" element={<Wrapper>
+                        <Contact />
+                    </Wrapper>} />
+                    <Route path="*" element={<Wrapper isDark>
+                        <Error />
+                    </Wrapper>} />
                 </Routes>
-                <Footer />
             </BrowserRouter>
 
 

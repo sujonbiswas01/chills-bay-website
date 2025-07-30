@@ -29,7 +29,7 @@ function MyModal() {
     return (
         <section>
             <div className="flex flex-wrap gap-3 ">
-                <Button variant="flat" onPress={handleopen}> <CiUser /> Account</Button>
+                <Button  className="" onPress={handleopen}> <CiUser /> Account</Button>
             </div>
 
             <Modal isOpen={isOpen} backdrop="blur" onClose={handleClose} size="5xl" placement="top">

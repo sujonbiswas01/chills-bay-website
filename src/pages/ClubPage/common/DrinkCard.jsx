@@ -24,7 +24,7 @@ const DrinkCard = ({title,api}) => {
                 {
                     data.map((mydata)=>(
                         <div key={mydata.id} className='relative'>
-                          <Button className='absolute right-2 top-4'>{mydata.date}</Button>
+                          <Button className='absolute right-2 top-2.5 lg:top-4'>{mydata.date}</Button>
                             <img src={mydata.img} className='w-[400px] object-cover rounded-lg mb-3' alt="" />
                             <h2 className='font-semibold text-lg mb-2 '>{mydata.title}</h2>
                             <p className='text-sm text-white mb-1'>{mydata.des}</p>

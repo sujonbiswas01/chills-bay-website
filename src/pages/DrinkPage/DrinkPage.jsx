@@ -12,7 +12,7 @@ const DrinkPage = () => {
     <FindPlace/>
     <Restuarants title="Popular Restuarants in Lagos"/>
     <DrinkCarousel/>
-    <Restuarants title="Resturants nearby"/>
+    <Restuarants title="Resturants nearby" />
     <Mymap/>
     </>
   )

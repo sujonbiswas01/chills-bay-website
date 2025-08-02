@@ -1,15 +1,13 @@
 import {
-    Modal,
-    ModalContent,
-    ModalHeader,
+    Modal,    ModalContent,
     ModalBody,
-    ModalFooter,
-    Button,
-    useDisclosure,
+  Button,
+  
 } from "@heroui/react";
 import { CiUser } from "react-icons/ci";
 import { Input } from "@heroui/react";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 
 function MyModal() {
@@ -24,6 +22,10 @@ function MyModal() {
     }
 
     const handleChange = ()=>{
+        setisOpen(false)
+    }
+
+    const HandleOpen=(e)=>{
         setisOpen(false)
     }
     return (
@@ -75,12 +77,10 @@ function MyModal() {
                                     <Input type="password" label="password" placeholder="*****************" labelPlacement="outside"/>
                                 </div>
 
-                                <button className="w-full bg-blue-500 text-white py-3 rounded-xl ">Sign Up</button>
+                                <NavLink to="/cart"><button  onClick={HandleOpen} className="w-full bg-blue-500 text-white py-3 rounded-xl cursor-pointer">sign up</button></NavLink>
                                 <p className="mt-4 text-center">By creating an account, you agree to our <a href="" className="text-[#0E8BFF]">Terms & Conditions</a> and <a href="" className="text-[#0E8BFF]">Privacy Policy</a>.</p>
                             </form>
-
-                            </div>
-
+                          </div>
                         </div>
                     </ModalBody>
                 </ModalContent>

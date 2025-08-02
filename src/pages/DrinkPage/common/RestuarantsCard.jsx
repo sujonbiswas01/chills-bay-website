@@ -1,11 +1,11 @@
 import { Button } from '@heroui/react';
-import { div } from 'framer-motion/client';
-import React, { useEffect, useState } from 'react'
+
+import { useEffect, useState } from 'react'
 
 const Restuarants = ({title}) => {
-    const [data,setdata]=useState([]);
+    const [dataItem,setdata]=useState([]);
     useEffect(()=>{
-         fetch("./data.json")
+         fetch("/Data.json")
           .then((response)=>{
             return response.json()
           })
@@ -22,8 +22,8 @@ const Restuarants = ({title}) => {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-5'>
                 {
-                    data.map((mydata)=>(
-                        <div key={mydata.id}>
+                    dataItem.map((mydata,index)=>(
+                        <div key={index}>
                             <img src={mydata.img} className='w-[400px] object-cover rounded-lg mb-3' alt="" />
                             <h2 className='font-semibold text-lg mb-2 '>{mydata.title}</h2>
                             <p className='text-sm text-gray-600 mb-1'>{mydata.des}</p>
